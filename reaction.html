@@ -22,13 +22,11 @@
         myTime = Date.now()
         console.log(myTime)
     }
-
-  function startTime(){
-    
-     for(var i=4;i>0;i--){
+    function startTime(){
         let max = 10
         let min = 2
         count = Math.floor(Math.random()* (max - min + 1) + min)
+        target = document.getElementById("target")
         for(i=count; i>=0; i--) {
         setTimeout(function(i){
             document.getElementById("countdown").innerHTML = i;
