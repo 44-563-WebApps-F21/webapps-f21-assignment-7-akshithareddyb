@@ -58,14 +58,14 @@
     {
      idsarray1 = document.getElementById(idsarray[animalLocation])
      idsarray1.src = "animal.jpg"
-     triesCount++
-     document.getElementById("tries").innerHTML = "Number of tries is " +triesCount
     }
     else
     {
      idsarray2 =  document.getElementById(idsarray[position])
      idsarray2.src = "emptyhole.jpg"
     }
+    triesCount++
+    document.getElementById("tries").innerHTML = "Number of tries is " +triesCount
     let distance_id = distance(position,animalLocation);
     document.getElementById("distance").innerHTML = "Distance from onclick element to animalLocation(13) : "+distance_id
   }  

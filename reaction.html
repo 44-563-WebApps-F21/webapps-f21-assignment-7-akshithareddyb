@@ -16,13 +16,31 @@
     <p id="countdown">Count</p>
     <button type="button" id="btn1" class="btn btn-warning" onclick="startTime()">Start Timer</button> <br><br>
   <button type="button" id="btn2" class="btn btn-info" onclick="recordReact()">React Now</button>
-  
-  <!-- <p id="target">I will become red </p> -->
   <script> 
     myTime = undefined
     function recordReact(){
         myTime = Date.now()
         console.log(myTime)
+    }
+    function startTime(){
+        let max = 10
+        let min = 2
+        count = Math.floor(Math.random()* (max - min + 1) + min)
+        target = document.getElementById("target")
+        for(i=count; i>=0; i--) {
+        setTimeout(function(i){
+            document.getElementById("countdown").innerHTML = i;
+        }, (count-i)*1000,i)
+        }
+        setTimeout(() => {
+        if(myTime == undefined){
+            target.innerHTML = "Too Slow"
+        } else {
+                let buttonTime = Date.now()
+                diff = buttonTime-myTime
+                target.innerHTML = "Time was "+ diff
+        }
+        }, count*1000)
     }
   </script>
   </body>
