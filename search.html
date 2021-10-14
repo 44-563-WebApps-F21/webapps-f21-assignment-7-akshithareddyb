@@ -51,7 +51,13 @@
 <script>
   const idsarray = ["img_1", "img_2", "img_3","img_4", "img_5", "img_6", "img_7", "img_8", "img_9", "img_10", "img_11", "img_12", "img_13", "img_14", "img_15", "img_16", "img_17", "img_18", "img_19", "img_20", "img_21", "img_22", "img_23", "img_24"];
   let triesCount = 0;
-  let animalLocation = 13;
+  //let animalLocation = 13;
+  let animalLocation = Math.floor(Math.random()*24)
+        function newGame(){
+            triesCount = 0
+            animalLocation = Math.floor(Math.random()*24)
+            
+        }
   function check(position)
   {
     if(animalLocation == position)
